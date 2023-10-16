@@ -14,7 +14,7 @@ import { useEffect, useState } from "react";
  * 서버에서는 window라는 객체를 알 수 없다
  * window는 브라우저에서만 객체에 접근할 수 있기 때문
  * Next에서 window나 document같은 속성을 useEffect밖에서 사용했을 때 에러 발생.
- * SSR에서 렌더링하고 싶지 않은 컴포넌특라 있을 경우 
+ * SSR에서 렌더링하고 싶지 않은 컴포넌트가 있을 경우 
  * 일반적인 import가 아니라 next/dynamic api, ssr: false를 사용하여 import
  * window 값은 서버에서 알 수 없으므로, pre-rendering된 html파일에서도 완전히 제거됨
  * */ 
@@ -22,6 +22,9 @@ import { useEffect, useState } from "react";
 const NoSSR = dynamic(() => import('../../components/section1/NoSSR'), {
   ssr: false,
 })
+/**dynamic
+ * https://nextjs.org/docs/pages/building-your-application/optimizing/lazy-loading
+ */
 
 const Example: NextPage = () => {
   const [data, setData] = useState(0);
