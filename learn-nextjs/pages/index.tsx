@@ -5,6 +5,7 @@ export default function Home() {
   return (
     <Fragment>
       <Header />
+      <main></main>
     </Fragment>
     
   );
