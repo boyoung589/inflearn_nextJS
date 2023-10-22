@@ -1,0 +1,24 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%; //html과 body가 꽉 차도록 % 주기 (vh등으로 줬을 때 모바일 등에서 예상치 못한 동작이 될 수 있음. % 추천)
+}
+
+@layer base {
+  #__next {
+    display: contents;
+  }
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
