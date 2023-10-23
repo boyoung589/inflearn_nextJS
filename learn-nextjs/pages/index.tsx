@@ -4,6 +4,7 @@ import styles from '../styles/header.module.scss';
 import Link from "next/link";
 import { VscFeedback } from 'react-icons/vsc';
 import { AiOutlineShareAlt } from 'react-icons/ai';
+import MapSection from "../components/home/MapSection"; //`@/components/home/MapSection`주소로 import하면 지도안나옴
 
 export default function Home() {
   return (
@@ -30,6 +31,7 @@ export default function Home() {
         ]}
       />
       <main style={{ width: '100%', height: '100%' }}>
+        <MapSection />
       </main>
     </Fragment>
   );
