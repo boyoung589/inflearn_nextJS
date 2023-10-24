@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: false,
   images: {
     // remotePatterns: [
     //   {
@@ -10,7 +10,7 @@ const nextConfig = {
     //   }
     // ]
     domains: ['lecture-1.vercel.app'],
-  }
-}
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
